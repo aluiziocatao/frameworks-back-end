@@ -69,4 +69,10 @@ public class AtendimentoController implements ICrudController<Atendimento> {
         servico.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @PutMapping("/status/{id}")
+    public ResponseEntity<Atendimento> updateStatus(@PathVariable("id") Long id){
+        Atendimento registro = servico.updateStatus(id);
+        return new ResponseEntity<>(registro, HttpStatus.OK);
+    }
 }

@@ -45,4 +45,11 @@ public class AtendimentoService implements ICrudService<Atendimento>{
         registro.setStatus(EStatusAtendimento.CANCELADO);
         repo.save(registro);
     }
+
+    public Atendimento updateStatus(Long id) {
+        Atendimento registro = repo.getById(id);
+        registro.setStatus(registro.getStatus().next());
+        registro = repo.save(registro);
+        return registro;
+    }
 }
