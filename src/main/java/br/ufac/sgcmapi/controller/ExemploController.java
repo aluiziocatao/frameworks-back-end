@@ -25,7 +25,7 @@ public class ExemploController {
     public String exemplo() {
         List<Atendimento> atendimentos = repo.findAll();
         StringBuilder resultado = new StringBuilder();
-        for(Atendimento item : atendimentos){
+        for (Atendimento item : atendimentos) {
             resultado.append(item.getData() + "\n");
             resultado.append(item.getHora() + "\n");
             resultado.append(item.getPaciente().getNome() + "\n");
@@ -36,7 +36,5 @@ public class ExemploController {
         }
         return "<pre>" + resultado.toString() + "</pre>";
     }
-
-    
     
 }

@@ -22,7 +22,7 @@ import javax.persistence.UniqueConstraint;
     })
 })
 public class Atendimento implements Serializable {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
@@ -45,7 +45,7 @@ public class Atendimento implements Serializable {
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private EStatusAtendimento status;
+    private EStatusAtendimento status = EStatusAtendimento.AGENDADO;
 
     public Long getId() {
         return id;
@@ -102,7 +102,5 @@ public class Atendimento implements Serializable {
     public void setStatus(EStatusAtendimento status) {
         this.status = status;
     }
-
     
-
 }

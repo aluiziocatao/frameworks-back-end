@@ -10,12 +10,12 @@ import br.ufac.sgcmapi.model.EStatusAtendimento;
 import br.ufac.sgcmapi.repository.AtendimentoRepository;
 
 @Service
-public class AtendimentoService implements ICrudService<Atendimento>{
+public class AtendimentoService implements ICrudService<Atendimento> {
 
     private final AtendimentoRepository repo;
 
-    @Autowired    
-    public AtendimentoService(AtendimentoRepository repo){
+    @Autowired
+    public AtendimentoService(AtendimentoRepository repo) {
         this.repo = repo;
     }
 
@@ -52,4 +52,5 @@ public class AtendimentoService implements ICrudService<Atendimento>{
         registro = repo.save(registro);
         return registro;
     }
+    
 }

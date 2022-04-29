@@ -10,7 +10,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Convenio implements Serializable {
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
@@ -33,7 +33,7 @@ public class Convenio implements Serializable {
 
     @Column(nullable = false)
     private String telefone;
-
+    
     @Column(nullable = false)
     private boolean ativo = true;
     
