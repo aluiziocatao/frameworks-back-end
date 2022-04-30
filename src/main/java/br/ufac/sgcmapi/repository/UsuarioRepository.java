@@ -15,4 +15,5 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     )
     List<Usuario> findByAll(String termoBusca);
     
+    Usuario findByNomeUsuario(String nomeUsuario);
 }

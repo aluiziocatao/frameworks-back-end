@@ -18,9 +18,25 @@ public class UsuarioService implements ICrudService<Usuario> {
         this.repo = repo;
     }
 
+    private Usuario removeSenha(Usuario usuario){
+        usuario.setSenha(null);
+        return usuario;
+    }
+
+    private List<Usuario> removeSenha(List<Usuario> usuarios){
+        usuarios.forEach(item -> removeSenha(item));
+        return usuarios;
+    }
+
+    public Usuario getByNomeUsuario(String nomeUsuario){
+        Usuario usuario = repo.findByNomeUsuario(nomeUsuario);
+        return usuario;
+    }
+
     @Override
     public List<Usuario> getAll() {
         List<Usuario> registros = repo.findAll();
+        registros = removeSenha(registros);
         return registros;
     }
 
