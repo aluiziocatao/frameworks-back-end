@@ -26,6 +26,7 @@ public class Seguranca extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().anyRequest().authenticated();
         http.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
         http.logout().logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.OK));
+        http.csrf().disable();
     }
     
     @Override

@@ -43,17 +43,26 @@ public class UsuarioService implements ICrudService<Usuario> {
     @Override
     public Usuario getById(Long id) {
         Usuario registro = repo.findById(id).orElse(null);
+        registro = removeSenha(registro);
         return registro;
     }
 
     @Override
     public List<Usuario> getByAll(String termoBusca) {
         List<Usuario> registros = repo.findByAll(termoBusca);
+        registros = removeSenha(registros);
         return registros;
     }
 
     @Override
     public Usuario save(Usuario objeto) {
+        if(objeto.getSenha() == null){
+            Long id = objeto.getId();
+            Usuario usuario = repo.findById(id).orElse(null);
+            if(usuario != null){
+                objeto.setSenha(usuario.getSenha(), false);
+            }
+        }
         return repo.save(objeto);
     }
 
