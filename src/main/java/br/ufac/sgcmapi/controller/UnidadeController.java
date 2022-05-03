@@ -17,7 +17,7 @@ import br.ufac.sgcmapi.model.Unidade;
 import br.ufac.sgcmapi.service.UnidadeService;
 
 @RestController
-@RequestMapping("/unidade")
+@RequestMapping("/config/unidade")
 public class UnidadeController implements ICrudController<Unidade>{
 
     private final UnidadeService servico;

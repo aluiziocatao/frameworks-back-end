@@ -18,7 +18,7 @@ import br.ufac.sgcmapi.model.Profissional;
 import br.ufac.sgcmapi.service.ProfissionalService;
 
 @RestController
-@RequestMapping("/profissional")
+@RequestMapping("/config/profissional")
 public class ProfissionalController implements ICrudController<Profissional> {
 
     private final ProfissionalService servico;

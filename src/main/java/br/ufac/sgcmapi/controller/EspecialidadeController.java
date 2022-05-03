@@ -17,7 +17,7 @@ import br.ufac.sgcmapi.model.Especialidade;
 import br.ufac.sgcmapi.service.EspecialidadeService;
 
 @RestController
-@RequestMapping("/especialidade")
+@RequestMapping("/config/especialidade")
 public class EspecialidadeController implements ICrudController<Especialidade>{
     
     private final EspecialidadeService servico;
