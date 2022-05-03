@@ -28,7 +28,7 @@ public class Seguranca extends WebSecurityConfigurerAdapter {
         http.logout().logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.OK));
         http.csrf().disable();
     }
-    
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(authProvider());
@@ -43,13 +43,13 @@ public class Seguranca extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public UserDetailsService udService() {
-        return new PerfilUsuarioService();
-    }
-
-    @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
+    @Bean
+    public UserDetailsService udService() {
+        return new PerfilUsuarioService();
+    }
+    
 }

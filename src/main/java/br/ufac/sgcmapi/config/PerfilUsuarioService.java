@@ -10,7 +10,7 @@ import br.ufac.sgcmapi.model.Usuario;
 import br.ufac.sgcmapi.service.UsuarioService;
 
 @Service
-public class PerfilUsuarioService implements UserDetailsService{
+public class PerfilUsuarioService implements UserDetailsService {
 
     @Autowired
     private UsuarioService servico;

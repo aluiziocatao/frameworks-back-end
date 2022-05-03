@@ -43,7 +43,6 @@ INSERT INTO `unidade` VALUES
 INSERT INTO `usuario` VALUES
     (1,b'1','Administrador','admin','ROLE_ADMIN','$2a$10$zArhMpAXoIhDRvqmJSPI2uDJbGxoQft9g2LCa.7fBCOXDuqKVC6cS'),
     (2,b'1','Daniel','daniel','ROLE_ADMIN','$2a$10$ZKaOzSH3atFflX/Xs7.w2OqVwGiZNl/FhpPHyLt3AyI7YNaFmnFS2'),
-    (3,b'1','Paulo','paulo','ROLE_ATENDENTE','$2a$10$5gqHW3bQnDx62QNLM6BzyespOh5A649KDB6mNw9UOJbo8eQCAqyG6'),
-    (4,b'1','Aluizio','aluizio','ROLE_ADMIN','$2a$10$zArhMpAXoIhDRvqmJSPI2uDJbGxoQft9g2LCa.7fBCOXDuqKVC6cS');
+    (3,b'1','Paulo','paulo','ROLE_ATENDENTE','$2a$10$5gqHW3bQnDx62QNLM6BzyespOh5A649KDB6mNw9UOJbo8eQCAqyG6');
 
 SET SESSION FOREIGN_KEY_CHECKS=1;

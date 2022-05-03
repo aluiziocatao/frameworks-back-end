@@ -63,12 +63,12 @@ public class Usuario implements Serializable {
         return senha;
     }
 
-    public void setSenha(String senha){
+    public void setSenha(String senha) {
         setSenha(senha, true);
     }
 
-    public void setSenha(String senha, Boolean encriptar) {
-        if(senha != null && encriptar){
+    public void setSenha(String senha, boolean encriptar) {
+        if (senha != null && encriptar) {
             BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
             senha = passwordEncoder.encode(senha);
         }

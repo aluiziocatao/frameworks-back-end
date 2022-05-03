@@ -7,13 +7,13 @@ import org.springframework.data.jpa.repository.Query;
 
 import br.ufac.sgcmapi.model.Unidade;
 
-public interface UnidadeRepository extends JpaRepository<Unidade, Long> {
 
-    @Query("SELECT u FROM Unidade u WHERE u.nome LIKE %?1% OR u.endereco LIKE %?1%")
-    
+public interface UnidadeRepository extends JpaRepository<Unidade, Long>{
+
+    @Query(
+        "SELECT u FROM Unidade u WHERE "+
+        "u.endereco LIKE %?1% OR "+
+        "u.nome LIKE %?1%"
+    )
     List<Unidade> findByAll(String termoBusca);
-    List<Unidade> findByNome(String nome);
-    List<Unidade> findByEndereco(String endereco);
-    List<Unidade> findByNomeAndEndereco(String nome, String endereco);
-    
 }

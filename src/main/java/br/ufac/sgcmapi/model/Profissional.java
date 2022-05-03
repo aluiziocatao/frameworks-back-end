@@ -33,7 +33,7 @@ public class Profissional implements Serializable {
 
     @Column(nullable = false)
     private String email;
-    
+
     public Long getId() {
         return id;
     }
@@ -75,6 +75,11 @@ public class Profissional implements Serializable {
     }
     public void setEmail(String email) {
         this.email = email;
+    }
+    public void setStatus(EStatusAtendimento cancelado) {
+    }
+    public EStatusAtendimento getStatus() {
+        return null;
     }
     
 }

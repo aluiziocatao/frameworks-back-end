@@ -25,7 +25,7 @@ public class Paciente implements Serializable {
     private String email;
 
     @Column(nullable = false)
-    private String telefone;
+    private String telefone; 
 
     @Column(nullable = false)
     private Date dataNascimento;
